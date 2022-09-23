@@ -8,6 +8,5 @@ public class Test {
 		System.out.println(Falco.getName());
 		System.out.println(Falco.getHours());
 		System.out.println(Falco.getRate());
-
 	}
 }
