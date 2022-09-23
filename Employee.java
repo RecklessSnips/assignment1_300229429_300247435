@@ -5,7 +5,7 @@ public class Employee {
 	private String name;
 	private double hours;
 	private double rate;
-	private Address[] address;
+	
 
 	public Employee(String name, double hours, double rate) {
 		this.name = name;
