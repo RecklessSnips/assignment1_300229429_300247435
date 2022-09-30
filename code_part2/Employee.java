@@ -1,17 +1,33 @@
-package Assignment_1;
 
 public class Employee {
 
+	class Address {
+		private String street;
+		private int number;
+		private String postal;
+
+		public Address(String street, int number, String postal) {
+			this.street = street;
+			this.number = number;
+			this.postal = postal;
+		}
+
+		public String toString() {
+			return "Street: " + this.street + " " + "Number: " + +this.number + " " + "Postal: " + this.postal;
+		}
+	}
+
+	int index = 0; // times calling the addAddress() method
+	int number = 0; // how many addresses have been created
 	private String name;
 	private double hours;
 	private double rate;
+	private Address[] add = new Address[6];
 
 	public Employee(String name, double hours, double rate) {
 		this.name = name;
 		this.hours = hours;
 		this.rate = rate;
-
-		getAddress();
 	}
 
 	public String getName() {
@@ -38,32 +54,27 @@ public class Employee {
 		this.rate = rate;
 	}
 
-	public void getAddress() {
-		Address address = new Address("Queen", 48, "K1P1N2");
-		Address address2 = new Address("King Edward", 800, "K1N6N5");
-		Address[] a = new Address[5];
-		a[0] = address;
-		a[1] = address2;
-
-		for (int i = 0; i < 2; i++) {
-			System.out.println(a[i]);
+	// Adding address to employee
+	public void addAddress(String address, int i, String postal) {
+		try {
+			add[index] = new Address(address, i, postal);
+			index++;
+			number++;
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("The array is full.");
+		} finally {
+			System.out.println("Created address of " + number);
 		}
 	}
-}
 
-class Address {
-	private String street;
-	private int number;
-	private String postal;
-
-	public Address(String street, int number, String postal) {
-		this.street = street;
-		this.number = number;
-		this.postal = postal;
-	}
-
-	public String toString() {
-		return "Street: " + this.street + " " + "Number: " + +this.number + " " + "Postal: " + this.postal;
+	// Get address from a employee
+	public void getAddress() {
+		String output = "";
+		int i = 0;
+		while (i < 6 && add[i] != null) {
+			output += add[i] + "\n";
+			i++;
+		}
+		System.out.println(output);
 	}
 }
-
