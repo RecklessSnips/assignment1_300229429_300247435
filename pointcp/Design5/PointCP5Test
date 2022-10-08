@@ -61,10 +61,10 @@ public class PointCP5Test {
 			}
 		}
 		System.out.println("\nYou entered:\n" + point);
-		point.convertStorageToCartesian();
+		point = point.convertStorageToCartesian();
 		Instant start = Instant.now();
 		System.out.println("\nAfter asking to store as Cartesian:\n" + point);
-		point.convertStorageToPolar();
+		point = point.convertStorageToPolar();
 		Instant finish = Instant.now();
 		System.out.println("\nAfter asking to store as Polar:\n" + point);
 		// I changed toMillis() to toNanos()
