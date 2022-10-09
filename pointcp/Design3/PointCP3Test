@@ -1,3 +1,5 @@
+package Assignment1.Design5.Design3;
+
 //This file contains material supporting section 2.9 of the textbook:
 //"Object Oriented Software Engineering" and is issued under the open-source
 //license found at www.lloseng.com 
@@ -25,7 +27,11 @@ public class PointCP3Test {
 	 * PointCPTest &lt;coordtype (c/p)&gt; &lt;X/RHO&gt; &lt;Y/THETA&gt;
 	 * </code> and the second by getting the program to prompt the user. If the user
 	 * does not enter a valid sequence at the command line, the program will prompte
-	 * him or her
+	 * him or her.
+	 *
+	 * @param args[0] The coordinate type. P for polar and C for cartesian.
+	 * @param args[1] The value of X or RHO.
+	 * @param args[2] The value of Y or THETA.
 	 */
 	public static void main(String[] args) {
 		PointCP3 point;
@@ -51,12 +57,10 @@ public class PointCP3Test {
 			}
 		}
 		System.out.println("\nYou entered:\n" + point);
-		point.convertStorageToCartesian();
 		Instant start = Instant.now();
 		System.out.println("\nAfter asking to store as Cartesian:\n" + point);
 		Instant finish = Instant.now();
-		System.out
-				.println("\nAfter asking to store as Polar:\n" + "[" + point.getRho() + ", " + point.getTheta() + "]");
+		System.out.println("\nAfter asking to store as Polar:\n" + "[" + point.getRho() + ", " + point.getTheta() + "]");
 		// I changed toMillis() to toNanos()
 		long timeElapsed = Duration.between(start, finish).toNanos();
 		System.out.println("Time past: ");
@@ -119,4 +123,3 @@ public class PointCP3Test {
 
 	}
 }
-
