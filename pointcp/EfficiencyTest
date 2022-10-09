@@ -1,0 +1,97 @@
+package Assignment1.Design5.Design5;
+
+import Assignment1.Design5.Design2.PointCP2;
+import Assignment1.Design5.Design3.PointCP3;
+import Assignment1.Design5.Design5.PointCP5;
+
+public class EfficiencyTest {
+
+    public static void main(String[] args) {
+        // Test for PointCP2
+        System.out.println("Test for PointCP2:\n");
+        System.out.println("rotatePoint() method tests:\n");
+        PointCP2 p1 = new PointCP2(1,1);
+        long start  = System.currentTimeMillis();
+        for(int i =0; i<100000000; i++) {
+            p1.rotatePoint(45);
+        }
+        long end = System.currentTimeMillis();
+//        System.out.println("Duration: " + (end - start));
+//
+//        long s  = System.currentTimeMillis();
+//        for(int i =0; i<100000000; i++) {
+//            po1.getDistance(p1);
+//        }
+//        long e = System.currentTimeMillis();
+
+        System.out.println("Duration: " + (end - start)+ "\n");
+        System.out.println("rotatePoint() method tests:\n");
+
+        //*******************************************************
+        //*******************************************************
+        //*******************************************************
+        // Test for PointCP3
+        System.out.println("Test for PointCP3:\n");
+        System.out.println("rotatePoint() method tests:\n");
+
+        PointCP3 p2 = new PointCP3(1,1);
+        long start1  = System.currentTimeMillis();
+        for(int i =0; i<100000000; i++) {
+            p2.rotatePoint(45);
+        }
+        long end1 = System.currentTimeMillis();
+//        System.out.println("Duration: " + (end1 - start1));
+//
+//        long s1  = System.currentTimeMillis();
+//        for(int i =0; i<100000000; i++) {
+//            po2.getDistance(p2);
+//        }
+//        long e1 = System.currentTimeMillis();
+
+        System.out.println("Duration: " + (end1 - start1)+ "\n");
+
+        //*******************************************************
+        //*******************************************************
+        //*******************************************************
+        // Test for PointCP5
+        System.out.println("Test for PointCP5, PointCP2:\n");
+        System.out.println("rotatePoint() method tests:\n");
+        PointCP5 p3= new Assignment1.Design5.Design5.PointCP2(1,1);
+        long start2  = System.currentTimeMillis();
+
+        for(int i =0; i<100000000; i++) {
+            p3.rotatePoint(45);
+        }
+        long end2 = System.currentTimeMillis();
+//        System.out.println("Duration: " + (end2 - start2));
+//
+//
+//        long s2  = System.currentTimeMillis();
+//        for(int i =0; i<100000000; i++) {
+//            po3.getDistance(p3);
+//        }
+//        long e2 = System.currentTimeMillis();
+
+        System.out.println("Duration: " + (end2 - start2)+"\n");
+
+        System.out.println("Test for PointCP5, PointCP3:\n");
+        System.out.println("rotatePoint() method tests:\n");
+        PointCP5 p4= new Assignment1.Design5.Design5.PointCP3(1,1);
+        long start3  = System.currentTimeMillis();
+
+        for(int i =0; i<100000000; i++) {
+            p4.rotatePoint(45);
+        }
+        long end3 = System.currentTimeMillis();
+//        System.out.println("Duration: " + (end3 - start3));
+//
+//        long s3  = System.currentTimeMillis();
+//
+//        for(int i =0; i<100000000; i++) {
+//            po4.getDistance(po4);
+//        }
+//        long e3 = System.currentTimeMillis();
+
+        System.out.println("Duration: " + (end3- start3));
+    }
+}
