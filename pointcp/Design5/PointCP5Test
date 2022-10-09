@@ -146,7 +146,7 @@ public class PointCP5Test {
 		if (coordType == 'C') {
 			return new PointCP3(a, b);
 		} else {
-			return new PointCP3(a, b);
+			return new PointCP2(a, b);
 		}
 	}
 }
