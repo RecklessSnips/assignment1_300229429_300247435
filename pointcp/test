@@ -1,0 +1,111 @@
+
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Random random = new Random();
+//        System.out.println(10 + random.nextInt(11));
+        System.out.println("Generating random" +
+                "coordinates for PointCP2:\n");
+
+        System.out.println("Generating coordinates from 1099999 to 1099999");
+        PointCP2 p1 = new PointCP2(100000+random.nextInt(999999),
+                100000+random.nextInt(999999));
+        long start  = System.currentTimeMillis();
+        for(int i =0; i<2000000000; i++) {
+            p1.getX();
+            p1.getY();
+        }
+        long end = System.currentTimeMillis();
+        System.out.println("Time passed: " + (end - start));
+
+        long s  = System.currentTimeMillis();
+        for(int i =0; i<2000000000; i++) {
+            p1.getRho();
+            p1.getTheta();
+        }
+        long e = System.currentTimeMillis();
+
+        System.out.println("Time passed: " + (e - s)+ "\n");
+
+        //*******************************************************
+        //*******************************************************
+        //*******************************************************
+        // Test for PointCP3
+        System.out.println("Generating random" +
+                "coordinates for PointCP3:\n");
+
+        System.out.println("Generating coordinates from 1099999 to 1099999");
+        PointCP3 p2 = new PointCP3(100000+random.nextInt(999999),
+                100000+random.nextInt(999999));
+        long start1  = System.currentTimeMillis();
+        for(int i =0; i<2000000000; i++) {
+            p2.getX();
+            p2.getY();
+        }
+        long end1 = System.currentTimeMillis();
+        System.out.println("Time passed: " + (end1 - start1));
+
+        long s1  = System.currentTimeMillis();
+        for(int i =0; i<2000000000; i++) {
+            p2.getRho();
+            p2.getTheta();
+        }
+        long e1 = System.currentTimeMillis();
+
+        System.out.println("Time passed: " + (e1 - s1)+ "\n");
+
+        //*******************************************************
+        //*******************************************************
+        //*******************************************************
+        // Test for PointCP5
+        System.out.println("Generating random" +
+                "coordinates for PointCP5:\n");
+
+        System.out.println("Generating coordinates from 1099999 to 1099999");
+        PointCP2 p3 = new PointCP2(100000+random.nextInt(999999),
+                100000+random.nextInt(999999));
+        long start2  = System.currentTimeMillis();
+        for(int i =0; i<2000000000; i++) {
+            p3.getX();
+            p3.getY();
+        }
+        long end2 = System.currentTimeMillis();
+        System.out.println("Time passed: " + (end2 - start2));
+
+        long s2  = System.currentTimeMillis();
+        for(int i =0; i<2000000000; i++) {
+            p3.getRho();
+            p3.getTheta();
+        }
+        long e2 = System.currentTimeMillis();
+
+        System.out.println("Time passed: " + (e2 - s2)+ "\n");
+
+        System.out.println("Generating random" +
+                "coordinates for PointCP5:\n");
+
+        System.out.println("Generating coordinates from 1099999 to 1099999");
+        PointCP3 p4 = new PointCP3(100000+random.nextInt(999999),
+                100000+random.nextInt(999999));
+        long start3  = System.currentTimeMillis();
+        for(int i =0; i<2000000000; i++) {
+            p4.getX();
+            p4.getY();
+        }
+        long end3 = System.currentTimeMillis();
+        System.out.println("Time passed: " + (end3 - start3));
+
+        long s3  = System.currentTimeMillis();
+        for(int i =0; i<2000000000; i++) {
+            p4.getRho();
+            p4.getTheta();
+        }
+        long e3 = System.currentTimeMillis();
+
+        System.out.println("Time passed: " + (e3 - s3)+ "\n");
+
+
+
+    }
+}
