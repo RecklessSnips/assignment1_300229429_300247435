@@ -79,4 +79,3 @@ public class PointCP3 extends PointCP5 {
 		return "Stored as " + "Cartesian  (" + getX() + "," + getY() + ")";
 	}
 }
-
