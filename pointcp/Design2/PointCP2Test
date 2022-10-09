@@ -59,7 +59,6 @@ public class PointCP2Test {
 		// start computing time elapsed
 		Instant start = Instant.now();
 		System.out.println("\nAfter asking to store as Cartesian:\n" + "[" + point.getX() + ", " + point.getY() + "]");
-		point.convertStorageToPolar();
 		Instant finish = Instant.now();
 		System.out.println("\nAfter asking to store as Polar:\n" + point);
 		// I changed toMillis() to toNanos()
