@@ -76,4 +76,3 @@ public class PointCP2 extends PointCP5 {
 		return "Stored as " + "Polar [" + getRho() + "," + getTheta() + "]" + "\n";
 	}
 }
-
